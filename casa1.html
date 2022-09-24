@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+		<link rel="shortcut icon" type="image/jpg" href="assets/img/Placemap.ico"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/db428faf56.js" crossorigin="anonymous"></script>
+    <title>PlaceMap</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/Placemap.png" alt="" height="30" class="d-inline-block align-text-top">
+          PlaceMap
+        </a>
+      </div>
+    </nav>
+    <main>
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="casaEjemplo.html">Casa ejemplo</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Casa 1</li>
+        </ol>
+      </nav>
+      <label>Desde... (origen)</label>
+      <select name="desde" id="desde" class="form-select" aria-label="Default select example" onchange=" cargarHacia();" >
+        <option selected>Seleccione Desde...</option>
+      </select>
+      <label>Hacia... (destino)</label>
+      <select name="hacia" id="hacia" class="form-select" aria-label="Default select example">
+        <option selected>Seleccione Hacia...</option>
+      </select>
+      <div class="d-grid gap-2 d-md-flex left-content-md-end">
+        <button class="btn btn-primary" type="button" id="botonMostrar" onclick="mensaje(); pisos();">Mostrar Niveles</button>
+        <button class="btn btn-primary" type="button" id="botonMostrar" onclick="caminos();">Mostrar Recorrido</button>
+    </div>
+      <section>
+        <p id="titulo"></p>
+      </section>
+      <section class="left mostrar" id="pisoN1">
+        <p class="center">Piso 1</p>
+        <canvas id="canvas1" width="400" height="400" style="border:3px solid #ccc;">
+          <img src="assets/img/Casas/piso1.jpg" alt="Piso 1">
+          Tu navegador no soporta canvas
+        </canvas>
+      </section>
+      <section class="left mostrar" id="pisoN2">
+        <p class="center">Piso 2</p>
+        <canvas id="canvas2" width="400" height="400" style="border:3px solid #ccc;">
+          <img src="assets/img/Casas/piso2.jpg" alt="Piso 2">
+          Tu navegador no soporta canvas
+        </canvas>
+      </section>
+      <section class="left mostrar" id="pisoN3">
+        <p class="center">Piso 3</p>
+        <canvas id="canvas3" width="400" height="400" style="border:3px solid #ccc;">
+          <img src="assets/img/Casas/piso3.jpg" alt="Piso 3">
+          Tu navegador no soporta canvas
+        </canvas>
+      </section>
+    </main>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
