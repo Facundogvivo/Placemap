@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+		<link rel="shortcut icon" type="image/jpg" href="assets/img/ico/Placemap.ico"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Javascript -->
+    <script src="assets/js/app-SR.js"></script>
+    <title>PlaceMap</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/img/Placemap.png" alt="" height="30" class="d-inline-block align-text-top">
+          PlaceMap
+        </a>
+      </div>
+    </nav>
+    <main>
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="clinicas.html">Clinicas</a></li>
+          <li class="breadcrumb-item"><a href="redSaludVitacura.html">Red Salud Vitacura</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Sala de Recuperaciones</li>
+        </ol>
+      </nav>
+      <select id="hacia" class="form-select btn btn-primary fs-3 text-wrap" aria-label="Default select example" onchange="mensaje(); pisos(); caminos();">
+        <option disabled selected>¿ DONDE QUIERE IR ?</option>
+        <optgroup label="Primer piso">
+          <option>INGRESO PRINCIPAL</option> 
+          <option>ADMINISTRACION Y CONTABILIDAD</option> 
+          <option>SALA DE OPERACIONES MENORES</option> 
+          <option>HABITACIÓN 1</option> 
+          <option>HABITACIÓN 2</option> 
+          <option>ESTAR ESPERA (1°P)</option> 
+          <option>BAÑOS (1°P)</option>
+        </optgroup>
+        <optgroup label="Segundo piso">
+          <option>DESINTROMETRÍA OSEA</option> 
+          <option>SALA DE RAYOS X</option> 
+          <option>ELECTROTERAPIA</option> 
+          <option>RESONANCIA MAGNETÍCA</option> 
+          <option>MECANOTERAPIA</option> 
+          <option>HIDROTERAPIA</option> 
+          <option>ESTAR ESPERA (2°P)</option>
+        </optgroup>
+        <optgroup label="Tercero piso"> 
+          <option>REABILITACIÓN TECNOLÓGICA</option> 
+          <option>EVALUACIÓN FISIOLÓGICA Y BIOQUÍMICA</option> 
+          <option>CONSULTORIO NUTRICIONISTA</option>  
+          <option>CONSULTORIO ORTOPEDISTA</option> 
+          <option>CONSULTORIO PSICOLOGÍA</option>  
+          <option>CONSULTORIO CARDIOLOGÍA</option> 
+          <option>ESTAR ESPERA (3°P)</option> 
+        </optgroup>
+        <optgroup label="Cuarto piso"> 
+          <option>ZONA DE MÁQUINAS PARA EJERCITAR PIERNAS</option> 
+          <option>ZONA DE MÁQUINAS PARA EJERCICIO AEROBICO Y CALENTAMIENTO</option>  
+          <option>ZONA DE MÁQUINAS PARA EJERCITAR BRAZOS</option> 
+          <option>BAÑOS (4°P)</option>
+        </optgroup>
+      </select>
+      <section>
+        <p id="titulo"></p>
+      </section>
+      <section class="left mostrar" id="pisoN1">
+        <p class="center">Piso 1</p>
+        <canvas id="canvas1" width="400" height="400" style="border:3px solid #ccc;">
+          <img src="assets/img/img/piso1.png" alt="Piso 1">
+          Tu navegador no soporta canvas
+        </canvas>
+      </section>
+      <section class="left mostrar" id="pisoN2">
+        <p class="center">Piso 2</p>
+        <canvas id="canvas2" width="400" height="400" style="border:3px solid #ccc;">
+          <img src="assets/img/img/piso2.png" alt="Piso 2">
+          Tu navegador no soporta canvas
+        </canvas>
+      </section>
+      <section class="left mostrar" id="pisoN3">
+        <p class="center">Piso 3</p>
+        <canvas id="canvas3" width="400" height="400" style="border:3px solid #ccc;">
+          <img src="assets/img/img/piso3.png" alt="Piso 3">
+          Tu navegador no soporta canvas
+        </canvas>
+      </section>
+      <section class="left mostrar" id="pisoN4">
+        <p class="center">Piso 4</p>
+        <canvas id="canvas4" width="400" height="400" style="border:3px solid #ccc;">
+          <img src="assets/img/img/piso4.png" alt="Piso 4">
+          Tu navegador no soporta canvas
+        </canvas>
+      </section>
+    </main>
+  </body>
+</html>

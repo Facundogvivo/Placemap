@@ -1,0 +1,36 @@
+body {
+    margin: 5px;
+}
+button {
+    margin: 10px;
+}
+label {
+    margin: 10px;
+}
+select {
+    width: 100%;
+    max-width: 600px;
+}
+.card {
+    margin: 50px;
+    float: left;
+}
+.card-text {
+    text-align: justify;
+}
+.card-body:last-child {
+    text-align: center;
+}
+.left {
+    float: left;
+}
+.mostrar {
+    display: none;
+}
+.center {
+    text-align: center;
+}
+.desabilitar {
+    pointer-events:none;
+    opacity: 0.2;
+}
